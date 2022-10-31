@@ -1,3 +1,9 @@
+//2.2 homework part 2
+// As is. Did not add anything
+
+//to run the tests
+//npx jest newFunction
+
 import { myFunction } from "./newFunction";
 
 describe("myFunction", () => {
