@@ -1,3 +1,5 @@
+// This is part of Homework 2.7.1
+
 // class to export = SpecPage
 import { SpecPage } from "./SpecPage";
 const chromedriver = require("chromedriver");

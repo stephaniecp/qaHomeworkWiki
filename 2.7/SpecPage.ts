@@ -1,3 +1,5 @@
+// This is part of Homework 2.7.1
+
 import { WebDriver, By, until,  } from "selenium-webdriver";
 
 export class SpecPage {

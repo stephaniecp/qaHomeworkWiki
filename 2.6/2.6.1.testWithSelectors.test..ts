@@ -33,5 +33,5 @@ describe("Filling in the blanks", () => {
         expect(errorMsg).toContain("Errors Received:")
         await driver.findElement(clrBtn).click()
         
-    })
-})
+    });
+});
