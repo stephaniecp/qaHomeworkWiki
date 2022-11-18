@@ -22,12 +22,12 @@ class Animal {
 // GOAL: "Declare the extended class"
 class Fish extends Animal {
     // GOAL: "Define any additional properties (saltwater)"
-    salwater: boolean;
+    saltwater: boolean;
     // GOAL: "Set up its constructor method"
     constructor(name: string, food: string, saltwater: boolean) {
          // GOAL: "This needs to call super(* pass the parent class’s parameters here ) first thing to use the parent class’s constructor."
         super(name, null, food);
-        this.salwater = saltwater;
+        this.saltwater = saltwater;
     }
     // GOAL: "Define any methods that will override parent methods (soundOff)"
     soundOff(): string {
@@ -35,9 +35,7 @@ class Fish extends Animal {
       }
     // GOAL: "Define any new methods (habitat)"
     habitat(): string {
-    return `The ${this.name} is a ${
-        this.saltwater ? "saltwater" : "freshwater"
-    } fish.`;
+    return `The ${this.name} is a ${this.saltwater ? "saltwater" : "freshwater"} fish.`;
     }
 }
 
@@ -66,7 +64,7 @@ class Fish extends Animal {
       else return `The ${this.name} is a flightless bird.`;
     }
 
-  }
+  
   
   describe("Testing animals", () => {
     test("a basic animal works as expected", () => {
