@@ -1,0 +1,146 @@
+{
+	"info": {
+		"_postman_id": "7be2206a-36f9-46dc-ae04-88d612fe7674",
+		"name": "Homework 2.9.2 (DevMountain - 2.9 Class Examples Copy)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24471842"
+	},
+	"item": [
+		{
+			"name": "GET Joes Cars",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/vehicles",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"vehicles"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Joes Cars WITH BaseUrl",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/vehicles",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"vehicles"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2.9.2.2 Added car instance",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    ",
+							"pm.variables.get(\"variable_key\");",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"make\": \"Subaru\",\n    \"model\": \"Outback\",\n    \"year\": 2004,\n    \"color\": \"Silver\",\n    \"price\": 1000001\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/vehicles",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"vehicles"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Untitled Request",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "// documentation > PUT tab > PUT section > \"Increase/Decrease price of car by $1000 using car ID\"",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/vehicles",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"vehicles"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://joes-autos.herokuapp.com/api/vehicles/22",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{baseUrl}}/vehicles/21",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"vehicles",
+						"21"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
